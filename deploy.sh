@@ -4,6 +4,6 @@ sudo docker rmi forestgreening/jenkinstest:latest
 
 sudo docker pull forestgreening/jenkinstest:latest
 
-docker run -d -p 8080:8080 --env-file=env_list.txt --name app forestgreening/jenkinstest:latest
+docker run -d -p 8080:8080 --env-file=~/scripts/env_list.txt --name app forestgreening/jenkinstest:latest
 
 docker rmi -f $(docker images -f "dangling=true" -q) || true
